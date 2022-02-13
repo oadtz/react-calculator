@@ -14,10 +14,10 @@ const Calculator: React.FunctionComponent = () => {
                 <div className="w-full bg-gray-500 dark:bg-indigo-500">
                     <div className="grid grid-cols-4 w-full">
                         {/* Row 1 */}
-                        <OperatorButton operator='C' className="bg-orange-400" />
-                        <OperatorButton operator='+/-' />
-                        <OperatorButton operator='÷' />
-                        <OperatorButton operator='x' />
+                        <OperatorButton operator='C' keyMap='escape' className="bg-orange-400" />
+                        <OperatorButton operator='+/-' keyMap='!' />
+                        <OperatorButton operator='÷' keyMap='/' />
+                        <OperatorButton operator='x' keyMap='*' />
                         {/* Row 2 */}
                         <InputButton input={7} />
                         <InputButton input={8} />
@@ -32,7 +32,7 @@ const Calculator: React.FunctionComponent = () => {
                         <InputButton input={1} />
                         <InputButton input={2} />
                         <InputButton input={3} />
-                        <OperatorButton operator='=' className='bg-green-700 h-32' extraHeight={true} />
+                        <OperatorButton operator='=' keyMap='enter' className='bg-green-700 h-32' extraHeight={true} />
                         {/* Row 5 */}
                         <InputButton input={0} extraWidth={true} />
                         <InputButton input={'.'} />

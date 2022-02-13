@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import CalculatorButton from '.';
 import { useCalculatorContext } from '../../../context/CalculatorContext';
 import { Input } from '../../../models/types';
@@ -15,14 +15,27 @@ const InputButton: React.FunctionComponent<IInputButtonProps> = ({
     className,
     ...props
 }) => {
-    const context = useCalculatorContext();
+    const { setInput } = useCalculatorContext();
+
+    useEffect(() => {
+        const onKeyDown = (e: KeyboardEvent) => {
+            if (e.key.toLowerCase() === String(input).toLowerCase())
+                setInput(input)
+        }
+
+        document.addEventListener('keydown', onKeyDown);
+
+        return () => {
+            document.removeEventListener('keydown', onKeyDown);
+        }
+    });
 
     return (
         <CalculatorButton className={[
             "bg-gray-200 hover:bg-gray-300 hover:bg-opacity-10 text-black",
             className
         ].join(' ')}
-        onClick={() => context.setInput(input)}
+        onClick={() => setInput(input)}
         {...props}>{input}</CalculatorButton>
     );
 }
