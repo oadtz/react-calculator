@@ -5,7 +5,7 @@ const CalculatorResultPanel: React.FunctionComponent = () => {
     const { input, operand1, operator, operand2, result } = useCalculatorContext();
 
     const getCalculation = () => {
-        let calculation: string = `${operand1} ${operator} ${operand2} =`;
+        let calculation: string = `${operand1 ?? ''} ${operator ?? ''} ${operand2 ?? ''} ${result != null ? '=' : ''}`;
         
         return calculation || '0';
     }

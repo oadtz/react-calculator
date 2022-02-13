@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Input, Operator } from '../models/types';
 
 interface ICalculatorContextProps {
