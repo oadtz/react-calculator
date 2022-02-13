@@ -32,7 +32,7 @@ const InputButton: React.FunctionComponent<IInputButtonProps> = ({
 
     return (
         <CalculatorButton className={[
-            "bg-gray-200 hover:bg-gray-300 hover:bg-opacity-10 text-black",
+            "bg-gray-200 hover:bg-gray-300 dark:bg-indigo-500 dark:hover:bg-indigo-600 hover:bg-opacity-10 text-black dark:text-white",
             className
         ].join(' ')}
         onClick={() => setInput(input)}
