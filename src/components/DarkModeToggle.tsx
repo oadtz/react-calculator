@@ -15,7 +15,7 @@ const DarkModeToggle: React.FunctionComponent = () => {
         <>
             <Helmet htmlAttributes={{ class: darkMode && 'dark' }}></Helmet>
             <button onClick={toggleDarkMode}>
-                <FontAwesomeIcon icon={darkMode ? faMoon : faSun} inverse={darkMode} />
+                <FontAwesomeIcon icon={darkMode ? faSun : faMoon} inverse={darkMode} />
             </button>
         </>
     );
