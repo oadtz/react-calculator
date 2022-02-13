@@ -11,7 +11,7 @@ const Calculator: React.FunctionComponent = () => {
                 <div className="w-full h-40 bg-gradient-to-b from-gray-800 to-gray-700 flex flex-col items-end text-right">
                     <CalculatorResultPanel />
                 </div>
-                <div className="w-full bg-gray-500 dark:bg-indigo-500">
+                <div className="w-full bg-gray-500">
                     <div className="grid grid-cols-4 w-full">
                         {/* Row 1 */}
                         <OperatorButton operator='C' keyMap='escape' className="bg-orange-400 dark:bg-orange-500" />
@@ -32,7 +32,7 @@ const Calculator: React.FunctionComponent = () => {
                         <InputButton input={1} />
                         <InputButton input={2} />
                         <InputButton input={3} />
-                        <OperatorButton operator='=' keyMap='enter' className='bg-green-700 dark:bg-green-800 h-32' extraHeight={true} />
+                        <OperatorButton operator='=' className='bg-green-700 dark:bg-green-800 h-32' extraHeight={true} />
                         {/* Row 5 */}
                         <InputButton input={0} extraWidth={true} />
                         <InputButton input={'.'} />
